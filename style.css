@@ -4,24 +4,53 @@ body {
   font-family: Helvetica, sans-serif;
   position: relative;
   text-align: left;
-  background-color: red;
+  color: white;
 }
 /* typography */
 h1 {
   font-size: 40px;
-  color: #333;
+  color: white;
 }
 
-.card span {
+h3 {
+  font-size: 5rem;
+}
+
+/* Header */
+
+header {
+  background: linear-gradient(-45deg, #f3a9cb, #c1a5ce, #97c5ea, #fdd1a3);
+  background-size: 400% 400%;
+  animation: gradient 8s infinite;
+  margin-bottom: 50px;
+  padding: 18% 10% 18% 10%;
+  border-radius: 0 0 50px 50px;
+}
+/* ---Animation--- */
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* .card span {
   font-size: 12px;
   font-weight: bold;
   color: #999;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin: 2em 0 0 0;
-}
+} */
 
 p {
+  color: white;
   font-size: 1.5rem;
 }
 
@@ -78,7 +107,7 @@ button {
 .card {
   border-radius: 50px;
   min-height: 100%;
-  background: white;
+  background: #f3a9cb;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -114,42 +143,46 @@ button {
   line-height: 1.4;
 }
 
-/* ---Animation--- */
-
-@keyframes rainbow {
-  0% {
-    background-color: #f3a9cb;
-    width: 100vmax;
-    height: 100vmax;
-  }
-  30% {
-    background-color: #c1a5ce;
-    width: 100vmax;
-    height: 100vmax;
-  }
-  63% {
-    background-color: #97c5ea;
-    width: 100vmax;
-    height: 100vmax;
-  }
-  85% {
-    background-color: #fdd1a3;
-    width: 100vmax;
-    height: 100vmax;
-  }
-
-  100% {
-    background-color: #f3a9cb;
-    width: 100vmax;
-    height: 100vmax;
-  }
+.item-1 {
+  border-radius: 50px;
+  background: #f3a9cb;
 }
 
-.bgAnimation {
-  width: 100vh;
-  background-color: goldenrod;
-  animation-name: rainbow;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+.item-2 {
+  border-radius: 50px;
+  background: #c1a5ce;
+}
+
+.item-3 {
+  border-radius: 50px;
+  background: #97c5ea;
+}
+
+.item-4 {
+  border-radius: 50px;
+  background: #fdd1a3;
+}
+
+/* About */
+.about {
+  margin: 5%;
+  background-color: #c1a5ce;
+  margin-top: 50px;
+  padding: 10%;
+  border-radius: 50px;
+  position: relative;
+}
+
+.img-about {
+  position: inherit;
+  width: 100%;
+  border-radius: 50%;
+}
+/* Footer */
+
+footer {
+  background-color: #97c5ea;
+  margin-top: 50px;
+  padding: 10%;
+  border-radius: 50px 50px 0 0;
 }
