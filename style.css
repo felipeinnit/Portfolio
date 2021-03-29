@@ -5,11 +5,19 @@ body {
   position: relative;
   text-align: left;
   color: white;
+  background-color: rgb(28, 28, 28);
 }
+svg {
+  margin: 0;
+  padding: -20px;
+  width: 30%;
+}
+
 /* typography */
 h1 {
   font-size: 40px;
   color: white;
+  margin: 0;
 }
 
 h3 {
@@ -23,7 +31,7 @@ header {
   background-size: 400% 400%;
   animation: gradient 8s infinite;
   margin-bottom: 50px;
-  padding: 18% 10% 18% 10%;
+  padding: 10% 10% 18% 10%;
   border-radius: 0 0 50px 50px;
 }
 /* ---Animation--- */
@@ -58,8 +66,9 @@ p {
 
 button {
   border-radius: 50px;
-  background-color: #c1a5ce; /* Green */
-  border: none;
+  background-color: transparent; /* Green */
+  border: white solid 2px;
+  fill: none;
   color: white;
   padding: 16px 32px;
   text-align: center;
@@ -71,9 +80,8 @@ button {
   cursor: pointer;
 }
 
-.button:hover {
-  background-color: #97c5ea;
-  color: white;
+button:hover {
+  background-color: rgb(40, 40, 40);
 }
 
 /* Projects */
@@ -118,11 +126,6 @@ button {
   transition: all 0.1s ease-in;
 }
 
-.card:hover {
-  top: -2px;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-}
-
 .card article {
   padding: 20px;
   display: flex;
@@ -132,7 +135,7 @@ button {
   flex-direction: column;
 }
 .card .thumb {
-  border-radius: 50px;
+  border-radius: 30px 30px 0 0;
   padding-bottom: 60%;
   background-size: cover;
   background-position: center center;
@@ -144,22 +147,22 @@ button {
 }
 
 .item-1 {
-  border-radius: 50px;
+  border-radius: 30px;
   background: #f3a9cb;
 }
 
 .item-2 {
-  border-radius: 50px;
+  border-radius: 30px;
   background: #c1a5ce;
 }
 
 .item-3 {
-  border-radius: 50px;
+  border-radius: 30px;
   background: #97c5ea;
 }
 
 .item-4 {
-  border-radius: 50px;
+  border-radius: 30px;
   background: #fdd1a3;
 }
 
@@ -167,9 +170,9 @@ button {
 .about {
   margin: 5%;
   background-color: #c1a5ce;
-  margin-top: 50px;
+  margin-top: 30px;
   padding: 10%;
-  border-radius: 50px;
+  border-radius: 30px;
   position: relative;
 }
 
@@ -182,7 +185,39 @@ button {
 
 footer {
   background-color: #97c5ea;
-  margin-top: 50px;
-  padding: 10%;
-  border-radius: 50px 50px 0 0;
+  margin-top: 30px;
+  padding: 1% 5%;
+  border-radius: 30px 30px 0 0;
+}
+
+.copyright {
+  font-size: 10px;
+}
+.contact-button {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 400px) {
+  .contact-button {
+    padding: 16px 20px;
+    font-size: 12px;
+  }
+}
+
+/* @media only screen and (min-width: 850px) {
+  .contact-button {
+    font-size: 10px;
+  }
+} */
+
+/* selection  */
+::-moz-selection {
+  /* Code for Firefox */
+  color: rgb(40, 40, 40);
+  background: white;
+}
+
+::selection {
+  color: rgb(40, 40, 40);
+  background: white;
 }
