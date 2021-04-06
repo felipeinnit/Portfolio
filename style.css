@@ -1,10 +1,14 @@
+* {
+  text-decoration: none;
+  color: rgb(28, 28, 28);
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: Helvetica, sans-serif;
   position: relative;
   text-align: left;
-  color: white;
   background-color: rgb(28, 28, 28);
 }
 svg {
@@ -16,12 +20,15 @@ svg {
 /* typography */
 h1 {
   font-size: 40px;
-  color: white;
   margin: 0;
 }
 
 h3 {
   font-size: 5rem;
+}
+
+span {
+  font-weight: bold;
 }
 
 /* Header */
@@ -48,17 +55,7 @@ header {
   }
 }
 
-/* .card span {
-  font-size: 12px;
-  font-weight: bold;
-  color: #999;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin: 2em 0 0 0;
-} */
-
 p {
-  color: white;
   font-size: 1.5rem;
 }
 
@@ -67,9 +64,9 @@ p {
 button {
   border-radius: 50px;
   background-color: transparent; /* Green */
-  border: white solid 2px;
+  border: rgb(28, 28, 28) solid 2px;
   fill: none;
-  color: white;
+  color: rgb(28, 28, 28);
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
@@ -82,11 +79,12 @@ button {
 
 button:hover {
   background-color: rgb(40, 40, 40);
+  color: white;
 }
 
 /* Projects */
 
-.band {
+.grid {
   width: 90%;
   max-width: 1240px;
   margin: 0 auto;
@@ -99,13 +97,13 @@ button:hover {
 }
 
 @media only screen and (min-width: 500px) {
-  .band {
+  .grid {
     grid-template-columns: 1fr;
   }
 }
 
 @media only screen and (min-width: 850px) {
-  .band {
+  .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -113,7 +111,7 @@ button:hover {
 /* card */
 
 .card {
-  border-radius: 50px;
+  border-radius: 30px;
   min-height: 100%;
   background: #f3a9cb;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -129,7 +127,6 @@ button:hover {
 .card article {
   padding: 20px;
   display: flex;
-
   flex: 1;
   justify-content: space-between;
   flex-direction: column;
@@ -166,21 +163,34 @@ button:hover {
   background: #fdd1a3;
 }
 
-/* About */
-.about {
-  margin: 5%;
-  background-color: #c1a5ce;
-  margin-top: 30px;
-  padding: 10%;
+.item-about {
   border-radius: 30px;
-  position: relative;
+  background: #c1a5ce;
 }
 
-.img-about {
-  position: inherit;
-  width: 100%;
-  border-radius: 50%;
+/* About */
+.grid-about {
+  padding-top: 20px;
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2, span 1fr;
+  grid-template-rows: auto;
 }
+.about-img {
+  padding: 20px 0 0 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-template-columns: 1fr, span 1fr;
+}
+
+.profile {
+  border-radius: 50%;
+  width: 40%;
+}
+
 /* Footer */
 
 footer {
@@ -193,22 +203,28 @@ footer {
 .copyright {
   font-size: 10px;
 }
-.contact-button {
+.send-button {
   margin-bottom: 20px;
+  background: white;
 }
 
-@media (max-width: 400px) {
-  .contact-button {
-    padding: 16px 20px;
-    font-size: 12px;
-  }
+/* Form */
+input,
+textarea {
+  width: 80%;
+  border: 2px solid rgb(28, 28, 28);
+  padding: 5px;
 }
 
-/* @media only screen and (min-width: 850px) {
-  .contact-button {
-    font-size: 10px;
-  }
-} */
+label {
+  display: block;
+  margin: 16px 0;
+  color: white;
+}
+
+textarea {
+  height: 200px;
+}
 
 /* selection  */
 ::-moz-selection {
@@ -216,8 +232,12 @@ footer {
   color: rgb(40, 40, 40);
   background: white;
 }
-
 ::selection {
   color: rgb(40, 40, 40);
   background: white;
+}
+
+/* Hide scroll bar */
+::-webkit-scrollbar {
+  display: none;
 }
