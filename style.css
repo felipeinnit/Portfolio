@@ -19,12 +19,17 @@ svg {
 
 /* typography */
 h1 {
-  font-size: 40px;
+  font-size: 2rem;
+}
+
+h2 {
   margin: 0;
+  font-size: 4rem;
 }
 
 h3 {
-  font-size: 5rem;
+  margin: 20px 0 0 0;
+  font-size: 1.5rem;
 }
 
 span {
@@ -37,7 +42,7 @@ header {
   background: linear-gradient(-45deg, #f3a9cb, #c1a5ce, #97c5ea, #fdd1a3);
   background-size: 400% 400%;
   animation: gradient 8s infinite;
-  margin-bottom: 50px;
+  margin-bottom: 24px;
   padding: 10% 10% 18% 10%;
   border-radius: 0 0 50px 50px;
 }
@@ -93,12 +98,16 @@ button:hover {
 
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-gap: 20px;
+  grid-gap: 24px;
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+  .contact-button {
+    font-size: 12px;
+    padding: 16px 20px;
   }
 }
 
@@ -168,6 +177,15 @@ button:hover {
   background: #c1a5ce;
 }
 
+.thumb {
+  filter: opacity(50%);
+  transition-duration: 0.4s;
+}
+
+.thumb:hover {
+  filter: none;
+}
+
 /* About */
 .grid-about {
   padding-top: 20px;
@@ -195,7 +213,7 @@ button:hover {
 
 footer {
   background-color: #97c5ea;
-  margin-top: 30px;
+  margin-top: 24px;
   padding: 1% 5%;
   border-radius: 30px 30px 0 0;
 }
