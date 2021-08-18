@@ -400,12 +400,32 @@ textarea {
 @media only screen and (max-width: 500px) {
   header {
     padding: 20px;
+    border-radius: 0 0 50px 50px;
+  }
+  .category-container {
+    margin: 50px 25px 50px 25px;
   }
   .header-description {
     max-width: 100%;
   }
-  .grid {
+  .container {
+    grid-template-areas:
+      "un"
+      "dos"
+      "cuatro"
+      "tres"
+      "cinco"
+      "ses"
+      "oto"
+      "siete";
     grid-template-columns: 1fr;
+    gap: 25px;
+    row-gap: 50px;
+    margin: 50px;
+  }
+
+  .background-image {
+    height: 300px;
   }
   .contact-button {
     font-size: 12px;
