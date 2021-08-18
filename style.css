@@ -47,9 +47,8 @@ header {
   animation: gradient 8s infinite;
   margin-bottom: 24px;
   border-radius: 0 0 50px 50px;
-  height: 100vh;
+  height: 100%;
   max-height: -webkit-fill-available;
-  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
