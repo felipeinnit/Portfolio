@@ -2,18 +2,17 @@
   text-decoration: none;
   color: white;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Playfair Display", serif;
   position: relative;
-  text-align: left;
   background-color: rgb(28, 28, 28);
   max-width: 1600px auto;
-  -webkit-font-smoothing: antialiased;
 }
 svg {
   max-width: 350px;
@@ -55,13 +54,12 @@ header {
 
 .header-info {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
 }
 
 .header-description {
   max-width: 50%;
-  margin-bottom: 0;
 }
 
 .header-scroll-text {
@@ -73,10 +71,29 @@ header {
 .brazil {
   color: #fdd1a3;
 }
+.header-menu {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .header-menu a {
-  padding-left: 2em;
+  padding-right: 2em;
   font-size: 1.5em;
+}
+
+.cv {
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+
+  border: 2px solid white;
+  text-align: center;
+}
+.cv a {
+  padding: 10px;
+  margin: auto;
 }
 
 /* ---Animation--- */
@@ -287,17 +304,14 @@ textarea {
 }
 
 @media only screen and (max-width: 850px) {
+  .header-description {
+    max-width: 70%;
+  }
   .header-info h1 {
     font-size: 1.5rem;
   }
-
-  .header-menu {
-    display: flex;
-    flex-direction: column;
-  }
   .header-menu a {
-    padding-top: 0.5em;
-    padding-left: 0;
+    font-size: 1rem;
   }
 }
 
@@ -308,19 +322,10 @@ textarea {
 }
 
 @media only screen and (max-width: 500px) {
-  .header-info {
-    display: block;
-  }
   .header-description {
     max-width: 100%;
   }
-  .header-menu {
-    flex-direction: row;
-  }
-  .header-menu a {
-    padding-top: 2em;
-    padding-right: 1em;
-  }
+
   .grid {
     grid-template-columns: 1fr;
   }
@@ -330,6 +335,21 @@ textarea {
   }
   .about-img h2 {
     font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .header-menu {
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .menu-items a {
+    padding-right: 1rem;
+  }
+
+  .cv {
+    margin-top: 2rem;
   }
 }
 
