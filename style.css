@@ -342,7 +342,6 @@ textarea {
 
 @media only screen and (max-width: 400px) {
   .header-menu {
-    flex-direction: column;
     align-items: baseline;
   }
 
