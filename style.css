@@ -43,9 +43,9 @@ header {
   background: linear-gradient(-45deg, #f3a9cb, #c1a5ce, #97c5ea, #fdd1a3);
   background-size: 400% 400%;
   animation: gradient 8s infinite;
-  border-radius: 0 0 50px 50px;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  border-radius: 0 0 100px 100px;
+  height: 96vh;
+  height: calc(var(--vh, 1vh) * 96);
   max-height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
@@ -115,39 +115,55 @@ p {
   font-size: 1.5rem;
 }
 
+/* CATEGORIES */
+.category-container {
+  margin: 150px 50px 150px 50px;
+}
+.category-container h2 {
+  padding: 0;
+  margin-bottom: 0;
+}
+.category-line {
+  border-radius: 25px;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(-45deg, #f3a9cb, #c1a5ce, #97c5ea, #fdd1a3);
+}
 /* Button */
 
 button {
-  /* border-radius: 50px; */
-  background-color: transparent; /* Green */
-  /* border: white, solid 2px !important; */
-  border: none;
-  fill: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
   transition-duration: 0.4s;
+  background-color: rgb(40, 40, 40);
+  border-radius: 25px;
+  width: 100px;
+  height: 50px;
+  border: 1px solid white;
+  min-width: 40px;
+  padding: 5px;
   cursor: pointer;
+  transition: all 0.1s ease-in;
 }
 
 button:hover {
-  background-color: rgb(40, 40, 40);
+  background: linear-gradient(-45deg, #f3a9cb, #c1a5ce, #97c5ea);
+  transition: all 0.2s ease-in;
   color: white;
+}
+
+.button-align {
+  display: flex;
+  gap: 25px;
 }
 
 /* Projects */
 
 .grid {
+  padding-top: 4vh;
+  padding-top: calc(var(--vh, 1vh) * 4);
   width: 90%;
   max-width: 1240px;
   margin: 0 auto;
-
   display: grid;
-
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-gap: 24px;
@@ -156,7 +172,7 @@ button:hover {
 /* card */
 
 .card {
-  border-radius: 30px;
+  border-radius: 25px;
   min-height: 100%;
   background: #f3a9cb;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -169,13 +185,6 @@ button:hover {
   transition: all 0.1s ease-in;
 }
 
-.card article {
-  padding: 20px;
-  display: flex;
-  flex: 1;
-  justify-content: space-between;
-  flex-direction: column;
-}
 .card .thumb {
   border-radius: 30px 30px 0 0;
   padding-bottom: 60%;
@@ -189,22 +198,18 @@ button:hover {
 }
 
 .item-1 {
-  border-radius: 30px;
   background: #f3a9cb;
 }
 
 .item-2 {
-  border-radius: 30px;
   background: #c1a5ce;
 }
 
 .item-3 {
-  border-radius: 30px;
   background: #97c5ea;
 }
 
 .item-4 {
-  border-radius: 30px;
   background: #fdd1a3;
 }
 
@@ -220,6 +225,76 @@ button:hover {
 
 .thumb:hover {
   filter: none;
+}
+
+/* LALALALAL */
+.container {
+  display: grid;
+  grid-template-areas:
+    "un un dos"
+    "tres cuatro cuatro"
+    "cinco cinco ses"
+    "siete oto oto";
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  row-gap: 200px;
+  margin: 50px;
+}
+
+.un {
+  grid-area: un;
+}
+.dos {
+  grid-area: dos;
+}
+.tres {
+  grid-area: tres;
+}
+.cuatro {
+  grid-area: cuatro;
+}
+.cinco {
+  grid-area: cinco;
+}
+.ses {
+  grid-area: ses;
+}
+.siete {
+  grid-area: siete;
+}
+.oto {
+  grid-area: oto;
+}
+
+.background-image {
+  border-radius: 25px;
+  filter: grayscale(1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  max-height: 600px;
+  height: 100%;
+  transition-duration: 0.4s;
+}
+.background-image:hover {
+  filter: grayscale(0);
+  transition-duration: 0.4s;
+}
+
+.container h3 {
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+}
+.container p {
+  padding: 50px 0;
+}
+
+article {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 /* About */
