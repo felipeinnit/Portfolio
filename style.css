@@ -29,7 +29,6 @@ h2 {
 }
 
 h3 {
-  margin: 20px 0 0 0;
   font-size: 1.5rem;
 }
 
@@ -295,17 +294,12 @@ article {
   flex: 1;
   justify-content: space-between;
   flex-direction: column;
+  max-width: 800px;
 }
 
 /* About */
-.grid-about {
-  padding-top: 20px;
-  width: 90%;
-  max-width: 1240px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 2, span 1fr;
-  grid-template-rows: auto;
+.about-container {
+  margin: 50px;
 }
 .about-img {
   padding: 20px 0 0 20px;
@@ -315,9 +309,9 @@ article {
   text-align: left;
   grid-template-columns: 1fr, span 1fr;
 }
-
 .profile {
-  border-radius: 50%;
+  border-radius: 25px;
+  filter: grayscale();
   max-width: 200px;
   width: 40%;
 }
@@ -326,18 +320,18 @@ article {
 
 footer {
   box-sizing: border-box;
-  background-color: #97c5ea;
-  margin-top: 24px;
-  padding: 1% 5%;
+  margin: 50px;
   border-radius: 30px 30px 0 0;
 }
 
 .copyright {
-  font-size: 10px;
+  margin-top: 25px;
+  font-size: 15px;
 }
 .send-button {
   margin-bottom: 20px;
-  background: white;
+  background-color: white;
+  color: #444;
 }
 
 .container-footer {
@@ -424,10 +418,11 @@ textarea {
     margin: 20px;
   }
   .button-align {
-    padding-bottom: 50px;
+    padding-bottom: 75px;
   }
   .container p {
     padding: 0;
+    font-size: 20px;
   }
 
   .background-image {
