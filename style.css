@@ -23,6 +23,7 @@ svg {
 h1 {
   font-size: 2rem;
   font-style: italic;
+  text-shadow: 0px 0px 20px rgb(167, 167, 167);
 }
 
 h2 {
@@ -36,6 +37,9 @@ h3 {
 span {
   font-weight: bold;
   color: #fdd1a3;
+}
+.mãe-title {
+  color: #f3a9cb;
 }
 
 /* Header */
@@ -70,9 +74,6 @@ header {
   display: none;
 }
 
-.brazil {
-  color: #fdd1a3;
-}
 .header-menu {
   margin-top: 25px;
   display: flex;
