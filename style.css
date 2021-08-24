@@ -304,24 +304,6 @@ footer {
   max-width: 1600px auto;
 }
 
-/* Form */
-input,
-textarea {
-  width: 80%;
-  border: 2px solid rgb(28, 28, 28);
-  padding: 5px;
-}
-
-label {
-  display: block;
-  margin: 16px 0;
-  color: white;
-}
-
-textarea {
-  height: 200px;
-}
-
 /* selection  */
 ::-moz-selection {
   /* Code for Firefox */
